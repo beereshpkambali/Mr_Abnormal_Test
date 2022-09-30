@@ -760,7 +760,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
         m=await message.reply_sticker("CAACAgUAAxkBAAEB8ptjNtloSubmAAEUew3KISswWoiAV54AApoAA8iUZBQsZeHhXO8lah4E")
         await asyncio.sleep(1) 
         await m.delete()
-        reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.START_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup,
@@ -794,8 +793,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await message.reply_chat_action("Typing")
         m=await message.reply_sticker("CAACAgUAAxkBAAEB8ptjNtloSubmAAEUew3KISswWoiAV54AApoAA8iUZBQsZeHhXO8lah4E")
         await asyncio.sleep(1) 
-        await m.delete()
-        reply_markup = InlineKeyboardMarkup(buttons)        
+        await m.delete()        
         await query.message.edit_text(        
             text="Select your required mode from below!",
             reply_markup=reply_markup,
