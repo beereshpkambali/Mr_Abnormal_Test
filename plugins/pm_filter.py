@@ -755,10 +755,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
             ],[
             InlineKeyboardButton('✅ SUBSCᏒIBΞ  ✅', url='https://youtube.com/channel/UCjXAdU8aMQLvHsRsO5tluAA')
         ]]
-        reply_markup = InlineKeyboardMarkup(buttons)        
-        await message.reply_chat_action("Typing")
+        reply = await query.message.reply_chat_action("Typing")
         m=await message.reply_sticker("CAACAgUAAxkBAAEB8ptjNtloSubmAAEUew3KISswWoiAV54AApoAA8iUZBQsZeHhXO8lah4E")
-        await asyncio.sleep(1) 
+        await asyncio.sleep(1.5) 
         await m.delete()
         await query.message.edit_text(
             text=script.START_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
@@ -789,10 +788,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
             ],[
             InlineKeyboardButton(text="𝖢𝗅𝗈𝗌𝖾", callback_data="close_data")
         ]]
-        reply_markup = InlineKeyboardMarkup(buttons)        
-        await message.reply_chat_action("Typing")
+        reply = await query.message.reply_chat_action("Typing")
         m=await message.reply_sticker("CAACAgUAAxkBAAEB8ptjNtloSubmAAEUew3KISswWoiAV54AApoAA8iUZBQsZeHhXO8lah4E")
-        await asyncio.sleep(1) 
+        await asyncio.sleep(1.5) 
         await m.delete()        
         await query.message.edit_text(        
             text="Select your required mode from below!",
