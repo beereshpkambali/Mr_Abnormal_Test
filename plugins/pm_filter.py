@@ -757,7 +757,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)        
         await message.reply_chat_action("Typing")
-        m=await message.reply_sticker("CAACAgUAAxkBAAEFXjpi3UkE0ZhynSwLX09m3hbV8mT3_QACagQAAuW0-FcThm6lMMZRtikE")
+        m=await message.reply_sticker("CAACAgUAAxkBAAEB8ptjNtloSubmAAEUew3KISswWoiAV54AApoAA8iUZBQsZeHhXO8lah4E")
         await asyncio.sleep(1) 
         await m.delete()
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -790,30 +790,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
             ],[
             InlineKeyboardButton(text="𝖢𝗅𝗈𝗌𝖾", callback_data="close_data")
         ]]
-        reply1 = await query.message.reply_text(
-            text="▢▢▢▢▢"
-        )
-        await asyncio.sleep(0.3)
-        reply2 = await reply1.edit_text(
-            text="▣▢▢▢▢"
-        )
-        await asyncio.sleep(0.3)
-        reply3 = await reply2.edit_text(
-            text="▣▣▢▢▢"
-        )
-        await asyncio.sleep(0.3)
-        reply4 = await reply3.edit_text(
-            text="▣▣▣▢▢"
-        )
-        await asyncio.sleep(0.3)
-        reply5 = await reply4.edit_text(
-            text="▣▣▣▣▢"
-        )
-        await asyncio.sleep(0.3)
-        reply6 = await reply5.edit_text(
-            text="▣▣▣▣▣"
-        )
-        await reply6.delete()
+        reply_markup = InlineKeyboardMarkup(buttons)        
+        await message.reply_chat_action("Typing")
+        m=await message.reply_sticker("CAACAgUAAxkBAAEB8ptjNtloSubmAAEUew3KISswWoiAV54AApoAA8iUZBQsZeHhXO8lah4E")
+        await asyncio.sleep(1) 
+        await m.delete()
         reply_markup = InlineKeyboardMarkup(buttons)        
         await query.message.edit_text(        
             text="Select your required mode from below!",
