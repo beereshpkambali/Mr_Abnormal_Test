@@ -755,30 +755,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
             ],[
             InlineKeyboardButton('✅ SUBSCᏒIBΞ  ✅', url='https://youtube.com/channel/UCjXAdU8aMQLvHsRsO5tluAA')
         ]]
-        reply1 = await query.message.reply_text(
-            text="▢▢▢▢▢"
-        )
-        await asyncio.sleep(0.3)
-        reply2 = await reply1.edit_text(
-            text="▣▢▢▢▢"
-        )
-        await asyncio.sleep(0.3)
-        reply3 = await reply2.edit_text(
-            text="▣▣▢▢▢"
-        )
-        await asyncio.sleep(0.3)
-        reply4 = await reply3.edit_text(
-            text="▣▣▣▢▢"
-        )
-        await asyncio.sleep(0.3)
-        reply5 = await reply4.edit_text(
-            text="▣▣▣▣▢"
-        )
-        await asyncio.sleep(0.3)
-        reply6 = await reply5.edit_text(
-            text="▣▣▣▣▣"
-        )
-        await reply6.delete()
+        reply_markup = InlineKeyboardMarkup(buttons)        
+        await message.reply_chat_action("Typing")
+        m=await message.reply_sticker("CAACAgUAAxkBAAEFXjpi3UkE0ZhynSwLX09m3hbV8mT3_QACagQAAuW0-FcThm6lMMZRtikE")
+        await asyncio.sleep(1) 
+        await m.delete()
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.START_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
